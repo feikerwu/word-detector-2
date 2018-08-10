@@ -15,6 +15,14 @@ function detector() {
     if (validateWord(word)) {
         console.log(word)
     }
+
+    fetch('http://localhost:3000/hello').then(res => {
+        return res.json()
+    }).then(data => {
+        console.log(data)
+    })
 }
+
+
 
 document.addEventListener('click', detector)
